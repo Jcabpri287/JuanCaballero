@@ -1,17 +1,17 @@
 <nav class="sticky-nav" style="margin-top: -23px; background-color: transparent;">
-<div class="tab-container">
-  <input type="radio" name="tab" id="tab1" class="tab tab--1" />
-  <label class="tab_label" for="tab1">Sobre mi</label>
+  <div class="tab-container">
+    <input type="radio" name="tab" id="tab1" class="tab tab--1" />
+    <label class="tab_label" for="tab1" (click)="scrollToSection('sobre-mi')">About me</label>
 
-  <input type="radio" name="tab" id="tab2" class="tab tab--2" />
-  <label class="tab_label" for="tab2">Conocimientos</label>
+    <input type="radio" name="tab" id="tab2" class="tab tab--2" />
+    <label class="tab_label" for="tab2" (click)="scrollToSection('conocimientos')">Skills</label>
 
-  <input type="radio" name="tab" id="tab3" class="tab tab--3" />
-  <label class="tab_label" for="tab3">Proyectos</label>
+    <input type="radio" name="tab" id="tab3" class="tab tab--3" />
+    <label class="tab_label" for="tab3" (click)="scrollToSection('proyectos')">Proyects</label>
 
-  <input type="radio" name="tab" id="tab4" class="tab tab--4" />
-  <label class="tab_label" for="tab4">Contactar</label>
+    <input type="radio" name="tab" id="tab4" class="tab tab--4" />
+    <label class="tab_label" for="tab4" (click)="scrollToSection('contactar')">Contact</label>
 
-  <div class="indicator"></div>
-</div>
+    <div class="indicator"></div>
+  </div>
 </nav>

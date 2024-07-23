@@ -11,7 +11,7 @@ import { ContactarComponent } from './components/contactar/contactar.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeroComponent, HeaderComponent,ParticipacionesComponent, SobremiComponent, ConocimientosComponent, ProyectosComponent, ContactarComponent],
+  imports: [RouterOutlet, HeroComponent, HeaderComponent,ParticipacionesComponent, SobremiComponent, ConocimientosComponent, ProyectosComponent, ContactarComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

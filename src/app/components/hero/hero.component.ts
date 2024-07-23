@@ -1,5 +1,5 @@
-import { NgStyle } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { isPlatformBrowser, NgStyle } from '@angular/common';
+import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
@@ -9,10 +9,6 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent implements OnInit {
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   scrollDown(): void {
     window.scrollTo({
@@ -29,4 +25,43 @@ export class HeroComponent implements OnInit {
     this.scale = 1 + (scrollTop / 1500); // Adjust the denominator to control zoom speed
   }
 
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {}
+
+  ngOnInit(): void {}
+
+  ngAfterViewInit(): void {}
+
+  ngOnDestroy(): void {}
+
+  redirectToVideo(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      window.location.href = 'https://youtu.be/LDX3Ple5HRo?si=B7_rVUytwrcr2Ivs';
+    }
+  }
+
+  redirectToGithub(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      window.location.href = 'https://github.com/Jcabpri287';
+    }
+  }
+
+  redirectToLinkedin(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      window.location.href = 'https://www.linkedin.com/in/juanancaballero';
+    }
+  }
+
+  downloadFile(): void {
+    const fileUrl = '/assets/CV.pdf';  // Reemplaza esto con la URL de tu archivo
+    const fileName = 'CV.pdf';  // Reemplaza esto con el nombre que desees para el archivo
+
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = fileName;
+
+    document.body.appendChild(link);
+    link.click();
+
+    document.body.removeChild(link);
+  }
 }

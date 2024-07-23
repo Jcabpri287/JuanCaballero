@@ -16,6 +16,8 @@ h2{
   margin-bottom: -20px;
 }
 
+
+
 .gradiente{
   background: linear-gradient(
     to right,
@@ -170,3 +172,16 @@ h2{
   pointer-events: auto;
 }
 
+@media (max-width: 550px) {
+  h1{
+    font-size: 8vw;
+  }
+  h2{
+    font-size: 4vw;
+    margin-bottom: 0px;
+  }
+  .conocimientos{
+    margin: 50px auto;
+  }
+
+}

@@ -1,10 +1,10 @@
 <div class="contactar-container">
   <div>
     <h2>
-      Contactar
+      Contact
     </h2>
     <h1>
-      <span class="gradiente">Contacta conmigo ahora</span>
+      <span class="gradiente">Get in touch now</span>
     </h1>
   </div>
   <div class="hero-photo div3">
@@ -12,13 +12,13 @@
     <img src="assets/Imagenes/Yo2.png" alt="Foto de Juan Caballero">
   </div>
   <p>
-    Me encantaría encontrar trabajo y colaborar en proyectos emocionantes. Si tienes alguna oportunidad o deseas discutir una idea, no dudes en ponerte en contacto conmigo.
+    I would love to find a job and collaborate on exciting projects. If you have any opportunities or would like to discuss an idea, please feel free to get in touch with me.
   </p>
   <ul class="social-links">
-    <button class="button">
+    <button class="button" (click)="redirectToLinkedin()">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
     </button>
-    <button class="button">
+    <button class="button" (click)="redirectToGithub()">
       <svg
         viewBox="0 0 24 24"
         fill="currentColor"
@@ -35,8 +35,8 @@
         ></path>
       </svg>
     </button>
-    <button class="custom-button">
-      Contactar ahora
+    <button class="custom-button" (click)="openMailClient()">
+      Contact now
     </button>
   </ul>
 
