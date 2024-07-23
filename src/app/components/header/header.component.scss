@@ -1,0 +1,126 @@
+/* Remove this container when use*/
+.component-title {
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  top: 30px;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #888;
+  text-align: center;
+}
+
+.tab-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 2px;
+  background-color: rgb(21, 21, 21);
+  border-radius: 50px;
+  padding: 10px 0px;
+}
+
+.indicator {
+  content: "";
+  width: 117px;
+  height: 33px;
+  background: rgb(43, 43, 43);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 9;
+  border: 0.5px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 50px;
+  transition: all 0.2s ease-out;
+}
+
+.tab {
+  width: 130px;
+  height: 28px;
+  position: absolute;
+  z-index: 99;
+  outline: none;
+  opacity: 0;
+}
+
+.tab_label {
+  width: 130px;
+  height: 25px;
+  color: white;
+  position: relative;
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+
+  font-size: 0.75rem;
+  opacity: 0.8;
+
+  cursor: pointer;
+}
+.sticky-nav {
+  position: -webkit-sticky; /* Soporte para navegadores antiguos */
+  position: sticky;
+  top: 10px; /* Se pega en la parte superior */
+  z-index: 1000; /* Asegúrate de que se muestre sobre otros elementos */
+  background-color: white; /* Opcional: agrega un fondo para que sea visible */
+}
+.tab--1:checked ~ .indicator {
+  left: 5px;
+}
+
+.tab--2:checked ~ .indicator {
+  left: calc(130px + 3px);
+}
+
+.tab--3:checked ~ .indicator {
+  left: calc(130px * 2 + 3px);
+}
+
+.tab--4:checked ~ .indicator {
+  left: calc(130px * 3 + 3px);
+}
+
+nav{
+  width: fit-content;
+  margin: 10px auto;
+  background-color: transparent;
+  position: sticky;
+}
+
+@media (max-width: 550px) {
+  .indicator {
+    content: "";
+    width: 70px;
+  }
+
+  .tab_label {
+    width: 80px;
+    height: 25px;
+    font-size: 0.6rem;
+  }
+  .tab--1:checked ~ .indicator {
+    left: 5px;
+  }
+
+  .tab--2:checked ~ .indicator {
+    left: calc(80px + 3px);
+  }
+
+  .tab--3:checked ~ .indicator {
+    left: calc(80px * 2 + 3px);
+  }
+
+  .tab--4:checked ~ .indicator {
+    left: calc(80px * 3 + 3px);
+  }
+
+}
